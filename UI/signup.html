@@ -2,6 +2,7 @@
     <head>
         <title>Signup</title>
         <link rel="stylesheet" href="static/css/main.css">
+        <script type="text/javascript" src="static/js/signup.js"></script>
     </head>
     <body>
         <div class="main-content">
@@ -19,12 +20,14 @@
                 <form>
                     <div class="form-content">
                         <h1>Signup Here</h1>
-                        <input type="text" placeholder="First Name"><br>
-                        <input type="text" placeholder="Last Name"><br>
-                        <input type="text" placeholder="Email"><br>
-                        <input type="password" placeholder="Password"><br>
+                        <input type="text" placeholder="First Name" name="firstName" id="firstName"><br>
+                        <input type="text" placeholder="Last Name" name="lastName" id="lastName"><br>
+                        <input type="text" placeholder="Other Names" name="otherNames" id="otherNames"><br>
+                        <input type="text" placeholder="username" id="username"><br>
+                        <input type="text" placeholder="Email" name="email" id="email"><br>
+                        <input type="password" placeholder="Password" name="password" id="password"><br>
                         <input type="password" placeholder="Confirm password"><br>
-                        <a href="profile.html"><input type="button" value="Signup"></a>
+                        <input type="button" value="Signup" id="submit" onclick="addUser()">
                     </div>
                 </form>
             </div>
