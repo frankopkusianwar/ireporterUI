@@ -43,7 +43,7 @@ function addUser(){
     	password:password
     }
 
-    fetch('https://ireporter-challenge4.herokuapp.com/api/v1/users',{
+    fetch('http://127.0.0.1:5000/api/v1/users',{
         method:'POST',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -53,8 +53,7 @@ function addUser(){
     })
     	.then((response) => response.json())
         .then(function(message){
-            // console.log(message['data'][0]['message']);
-            // console.log(message['message']);
+
             if(message['message']=== 'invalid email adress'){
                 alert('invalid email adress');
                 return false
