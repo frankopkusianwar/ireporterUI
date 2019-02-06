@@ -53,8 +53,7 @@ function addUser(){
     })
     	.then((response) => response.json())
         .then(function(message){
-            // console.log(message['data'][0]['message']);
-            // console.log(message['message']);
+
             if(message['message']=== 'invalid email adress'){
                 alert('invalid email adress');
                 return false

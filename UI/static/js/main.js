@@ -32,6 +32,7 @@ function login(){
                 var token = message['access-token'];
                 localStorage.setItem('access-token', token);
                 localStorage.setItem('user', username);
+                alert(str);
 
             }else if(message['message']==='username does not exist please register'){
                 alert('username does not exist please register');
@@ -42,3 +43,4 @@ function login(){
             }
     });
 }
+
