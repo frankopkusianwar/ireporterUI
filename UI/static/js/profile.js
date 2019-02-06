@@ -30,7 +30,7 @@ var valid_token = localStorage.getItem('access-token');
 // }
 
 window.onload = function loadFlags(){
-    fetch("https://ireporter-challenge4.herokuapp.com/api/v1/red-flags",{
+    fetch("http://127.0.0.1:5000/api/v1/red-flags",{
         method:'GET',
         headers:{
             'Content-type':'application/json',

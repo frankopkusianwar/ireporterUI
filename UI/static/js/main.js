@@ -16,7 +16,7 @@ function login(){
         password:password
     };
 
-    fetch("https://ireporter-challenge4.herokuapp.com/api/v1/login",{
+    fetch("http://127.0.0.1:5000/api/v1/login",{
         method:'POST',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -35,7 +35,7 @@ function login(){
                 alert(str);
 
             }else if(message['message']==='username does not exist please register'){
-                alert('username does not exist please register');
+                alert('invalid username!');
                return false
             }else{
                 alert('invalid password');

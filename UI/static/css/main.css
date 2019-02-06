@@ -107,7 +107,7 @@ body{
     width: 40%;
 }
 .buttons input{
-    background: rgb(37, 96, 151); 
+    background: rgb(37, 96, 151);
     color: white;
 }
 
@@ -161,6 +161,19 @@ item2 a{
     width: 40%;
     margin: 0.5%;
 }
+.location{
+    visibility: hidden;
+}
+
+.location input{
+    border: 1px solid rgb(37, 96, 151);
+}
+
+.show{
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
 
 footer{
     left: 0;
@@ -175,7 +188,7 @@ footer{
     display: none;
 }
 @media only screen and (max-width: 600px) {
-    
+
     .content{
         padding-top: 20%;
     }
@@ -209,11 +222,11 @@ footer{
     float: right;
     display: block;
   }
-  
+
   footer{
     margin-top: 20%;
 }
-  
+
 }
 
 @media only screen and (max-width: 600px) {
