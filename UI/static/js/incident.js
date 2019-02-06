@@ -36,7 +36,7 @@ function addIncident(){
         longitude:longitude
     }
 
-    fetch('http://127.0.0.1:5000/api/v1/incidents',{
+    fetch('https://ireporter-challenge4.herokuapp.com/api/v1/incidents',{
         method:'POST',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -74,7 +74,7 @@ function addIncident(){
 
 // fetch all red-flags
 window.onload = function loadRedFlags(){
-    fetch("http://127.0.0.1:5000/api/v1/red-flags",{
+    fetch("https://ireporter-challenge4.herokuapp.com/api/v1/red-flags",{
         method:'GET',
         headers:{
             'Content-type':'application/json',
@@ -90,7 +90,7 @@ window.onload = function loadRedFlags(){
                     red_status = message['data'][item].status
                     if(red_status ==='draft'){
                         records+=`<div class="redflag-content"><item1><img src="static/images/coruption1.jpg"><span class="location" id="edit_txt">
-                                </br></br><textarea rows="8" id="new_com">${message['data'][item].description}</textarea></br></br><input type="button" value="update" id="submit" onclick="updatelocation(${redflagId})"></span></item1>
+                                </br></br><textarea rows="8" id="new_com">${message['data'][item].description}</textarea></br></br><input type="button" value="update" id="submit" onclick="updatecomment(${redflagId})"></span></item1>
                         <item2><h1>${message['data'][item].title}</h1><blockquote>${message['data'][item].description} <a href="recorddet.html">Read more...</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#" onclick=popText()>edit text</a></blockquote><p><span class="label">Latitude: ${message['data'][item].latitude}</span> &nbsp&nbsp&nbsp&nbsp&nbsp<span class="label">Longitude: ${message['data'][item].longitude}</span></p>
                         </item2><p><span class="label">Status: ${message['data'][item].status}</span> </p><span class="view-buttons">
                             <form>
@@ -154,7 +154,7 @@ function updatelocation(redId){
         longitude:new_long
     }
 
-    fetch(`http://127.0.0.1:5000/api/v1/red-flags/${redId}/location`,{
+    fetch(`https://ireporter-challenge4.herokuapp.com/api/v1/red-flags/${redId}/location`,{
         method:'PATCH',
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -176,7 +176,7 @@ function updatelocation(redId){
 }
 
 function del(redId){
-    fetch(`http://127.0.0.1:5000/api/v1/red-flags/${redId}`,{
+    fetch(`https://ireporter-challenge4.herokuapp.com/api/v1/red-flags/${redId}`,{
         method:'DELETE',
         headers:{
             'Content-type':'application/json',
@@ -198,7 +198,7 @@ function canc(){
     window.location.replace('viewFlag.html');
 }
 
-function updatelocation(redId){
+function updatecomment(redId){
     var new_comment=document.getElementById('new_com').value;
 
     var inc_data = {
@@ -206,7 +206,7 @@ function updatelocation(redId){
 
     }
 
-    fetch(`http://127.0.0.1:5000/api/v1/red-flags/${redId}/comment`,{
+    fetch(`https://ireporter-challenge4.herokuapp.com/api/v1/red-flags/${redId}/comment`,{
         method:'PATCH',
         headers: {
             'Accept': 'application/json, text/plain, */*',
