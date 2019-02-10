@@ -16,18 +16,15 @@ function addUser(){
         alert("please enter last name");
         return false
     }
-    if(onames ==''){
-        alert("please enter other names");
-        return false
-    }
     if(username ==''){
         alert("please enter username");
         return false
     }
-    else if(email== ''){
+    if(email== ''){
         alert("please enter email");
         return false
-    }else if(password== ''){
+    }
+    if(password== ''){
         alert("please enter password");
         return false
     }

@@ -35,7 +35,7 @@ function login(){
                 alert(str);
 
             }else if(message['message']==='username does not exist please register'){
-                alert('username does not exist please register');
+                alert('invalid username!');
                return false
             }else{
                 alert('invalid password');
