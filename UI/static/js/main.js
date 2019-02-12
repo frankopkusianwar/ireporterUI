@@ -26,19 +26,24 @@ function login(){
     }).then((response)=>response.json())
         .then((message)=>{
 
-            if(message['access-token']){
+            var user_type = message['userType']
+            if(message['access-token'] && user_type === false){
                 window.location.replace('profile.html');
-                //storing data locally in the browser
+                var token = message['access-token'];
+                localStorage.setItem('access-token', token);
+                localStorage.setItem('user', username);
+
+            }else if(message['access-token'] && user_type === true){
+                window.location.replace('adminviewrecords.html');
                 var token = message['access-token'];
                 localStorage.setItem('access-token', token);
                 localStorage.setItem('user', username);
                 alert(str);
-
             }else if(message['message']==='username does not exist please register'){
-                alert('invalid username!');
+                alert('invalid login credentials!');
                return false
             }else{
-                alert('invalid password');
+                alert('invalid login credentials');
                return false
             }
     });
