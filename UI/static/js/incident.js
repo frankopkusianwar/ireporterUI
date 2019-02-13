@@ -114,8 +114,7 @@ window.onload = function loadRedFlags(){
                 records=`<h1>red-flag records not found!</h1>`
                 document.getElementById('redflags').innerHTML=records;
             }else{
-                records=`<h1>token has expired please login again!</h1>`
-                document.getElementById('redflags').innerHTML=records;
+                window.location.replace('index.html');
             }
 
         });
@@ -225,3 +224,5 @@ function updatecomment(redId){
 
         });
 }
+
+

@@ -44,8 +44,7 @@ window.onload = function loadinterventions(){
                 records=`<h1>intervention records not found!</h1>`
                 document.getElementById('interventions').innerHTML=records;
             }else{
-                records=`<h1>token has expired please login again!</h1>`
-                document.getElementById('interventions').innerHTML=records;
+                window.location.replace('index.html');
             }
 
         });
