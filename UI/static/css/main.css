@@ -74,6 +74,30 @@ body{
     margin-top: 10%;
 }
 
+.redflag-contents{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2%;
+    border: 0px;
+    background: white;
+    padding: 5%;
+    margin: 2%;
+}
+
+.redflag-contents item1{
+    border: 2px solid red;
+    text-align: center;
+    padding: 10px;
+}
+
+.redflag-contents h1{
+    color: rgb(37, 96, 151);
+}
+
+.redflag-contents a{
+    text-decoration: none;
+}
+
 .redflag-content{
     display: grid;
     grid-template-columns: auto auto;
@@ -178,6 +202,7 @@ item2 a{
 footer{
     left: 0;
     bottom: 0;
+    position: fixed;
     width: 100%;
     background-color: black;
     color: white;
