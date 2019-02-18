@@ -128,7 +128,7 @@ body{
 }
 
 .image-upload input{
-    width: 40%;
+    width: 48%;
 }
 .buttons input{
     background: rgb(37, 96, 151);
@@ -136,7 +136,7 @@ body{
 }
 
 .sub input{
-    width: 30%;
+    width: 35%;
 }
 
 .view-buttons input{
@@ -182,7 +182,7 @@ item2 a{
 }
 
 .lat-long-input input{
-    width: 40%;
+    width: 48%;
     margin: 0.5%;
 }
 .location{
@@ -197,6 +197,21 @@ item2 a{
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+}
+
+#map {
+    height: 60vh;
+    width: 70vh;
+    margin-bottom: 10px;
+}
+
+.card {
+  padding: 2px;
+  border: 1px solid rgb(37, 96, 151);
+}
+
+.card_space {
+    margin-left: 80px;
 }
 
 footer{

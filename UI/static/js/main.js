@@ -38,7 +38,7 @@ function login(){
                 var token = message['access-token'];
                 localStorage.setItem('access-token', token);
                 localStorage.setItem('user', username);
-                alert(str);
+                //alert(str);
             }else if(message['message']==='username does not exist please register'){
                 alert('invalid login credentials!');
                return false
