@@ -4,8 +4,8 @@ function addUser(){
 	var lname=document.getElementById('lastName').value;
 	var onames=document.getElementById('otherNames').value;
 	var username=document.getElementById('username').value;
-    var email = document.getElementById("email").value;
-    var password=document.getElementById('password').value;
+	var email = document.getElementById("email").value;
+	var password=document.getElementById('password').value;
 
     //form validation
     if(fname ==''){
